@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="cmyk">
+<html lang="en"data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,24 +21,153 @@
 </head>
 <body class="p-12">
     <!-- blog  -->
-     <div class="container flex justify-between">
+     <div class="container bg-blue-100 p-4 flex justify-between">
         <div>
             <h1 class="text-2xl font-semibold">
                 Interactive
             </h1>
             <p class="text-lg">Geometry Genius</p>
-        </div>
-        <button class="btn btn-primary">
+        </div>        
+        <button  class="btn btn-info">
             <a href="">Blog</a>
         </button>
      </div>
      <!-- main  -->
-      <main>
-        <div></div>
+      <main class="py-4 flex">
+        <div class="grid grid-cols-3">
+            <!-- Triangle -->
+            <div >
+                <div id="triangle"  class="z-10 hover:scale-110 card card-compact bg-base-100 w-80 shadow-xl grid justify-center text-center py-8 px-4 rounded-none">
+                    <figure>
+                        <img src="./images/triangle.png">
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="text-lg font-bold">Triangle</h2>
+                        <p>Area (A) = 0.5 × b × h</p>
+                        <div class="flex">
+                            <input type="text" placeholder="b" class="input bg-gray-200 w-20">
+                            <p class="m-auto">cm</p>
+                            <input type="text" placeholder="h" class="input bg-gray-200 w-20">
+                            <p class="m-auto">cm</p>
+                        </div>
+                    </div>
+                    <button onclick="button(event)" class="btn btn-primary">Calculate</button>
+                </div>
+            </div>
+        
+            <!-- Rectangle -->
+            <div>
+                <div id="rectangle" class="card card-compact bg-base-100 w-80 shadow-xl grid justify-center text-center py-8 px-4 rounded-none">
+                    <figure>
+                        <img src="./images/rectangle.png">
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="text-lg font-bold">Rectangle</h2>
+                        <p>Area (A) = l × w</p>
+                        <div class="flex">
+                            <input type="text" placeholder="l" class="input bg-gray-200 w-20">
+                            <p class="m-auto">cm</p>
+                            <input type="text" placeholder="w" class="input bg-gray-200 w-20">
+                            <p class="m-auto">cm</p>
+                        </div>
+                    </div>
+                    <button onclick="button(event)" class="btn btn-primary">Calculate</button>
+                </div>
+            </div>
+        
+            <!-- Parallelogram -->
+            <div>
+                <div id="parallelogram" class="card card-compact bg-base-100 w-80 shadow-xl grid justify-center text-center py-8 px-4 rounded-none">
+                    <figure>
+                        <img src="./images/parallelogram.png">
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="text-lg font-bold">Parallelogram</h2>
+                        <p>Area (A) = b × h</p>
+                        <div class="flex">
+                            <input type="text" placeholder="b" class="input bg-gray-200 w-20">
+                            <p class="m-auto">cm</p>
+                            <input type="text" placeholder="h" class="input bg-gray-200 w-20">
+                            <p class="m-auto">cm</p>
+                        </div>
+                    </div>
+                    <button  onclick="button(event)" class="btn btn-primary">Calculate</button>
+                </div>
+            </div>
+        
+            <!-- Rhombus -->
+            <div>
+                <div id="rhombus" class="card card-compact bg-base-100 w-80 shadow-xl grid justify-center text-center py-8 px-6">
+                    <figure>
+                        <img src="./images/rhombus.png">
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="text-lg font-bold">Rhombus</h2>
+                        <p>Area (A) = 0.5 × d₁ × d₂</p>
+                        <div class="flex">
+                            <input type="text" placeholder="d₁" class="input bg-gray-200 w-20">
+                            <p class="m-auto">cm</p>
+                            <input type="text" placeholder="d₂" class="input bg-gray-200 w-20">
+                            <p class="m-auto">cm</p>
+                        </div>
+                    </div>
+                    <button onclick="button(event)" class="btn btn-primary">Calculate</button>
+                </div>
+            </div>
+        
+            <!-- Pentagon -->
+            <div>
+                <div id="pentagon" class="card card-compact bg-base-100 w-80 shadow-xl grid justify-center text-center py-8 px-4 rounded-none">
+                    <figure>
+                        <img src="./images/pentagon.png">
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="text-lg font-bold">Pentagon</h2>
+                        <p>Area (A) = 0.5 × a × p</p>
+                        <div class="flex">
+                            <input type="text" placeholder="a" class="input bg-gray-200 w-20">
+                            <p class="m-auto">cm</p>
+                            <input type="text" placeholder="p" class="input bg-gray-200 w-20">
+                            <p class="m-auto">cm</p>
+                        </div>
+                    </div>
+                    <button onclick="button(event)" class="btn btn-primary">Calculate</button>
+                </div>
+            </div>
+        
+            <!-- Ellipse -->
+            <div>
+                <div id="ellipse" class="card card-compact bg-base-100 w-80 shadow-xl grid justify-center text-center py-8 px-4 rounded-none">
+                    <figure>
+                        <img src="./images/ellipse.png">
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="text-lg font-bold">Ellipse</h2>
+                        <p>Area (A) = π × a × b</p>
+                        <div class="flex">
+                            <input type="text" placeholder="a" class="input bg-gray-200 w-20">
+                            <p class="m-auto">cm</p>
+                            <input type="text" placeholder="b" class="input bg-gray-200 w-20">
+                            <p class="m-auto">cm</p>
+                        </div>
+                    </div>
+                    <button onclick="button(event)" class="btn btn-primary">Calculate</button>
+                </div>
+            </div>
+        </div>
+        
+  
+
         <!-- side are  -->
-        <div></div>
+        <div class="w-80 text-center grid justify-center">
+            <h3 class="text-sm underline font-bold">Area Calculation</h3>
+        </div>
       </main>
-</body>
+
+    <script src="effects.js"></script>
+    <script src="math.js"></script>
+    <script src="./script.js"></script>
+    </body>
 </html>
 
 
